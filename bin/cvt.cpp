@@ -3,7 +3,7 @@
 #include "../inc/fprinter.hpp"
 using namespace std;
 
-int main(int argc, char** argv)
+int	main(int argc, char** argv)
 {
 	if (argc < 3 || argc > 4)
 		return -1;

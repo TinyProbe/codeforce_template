@@ -38,7 +38,7 @@ template <class T> void	print_vector(const vector<T>& v, const string& end)
 		print();
 }
 
-int main(void)
+int	main(void)
 {
 	auto	minmax = vector<int>({ 0, 0, 0, 0, 0, 0 });
 	auto	tc = 0;

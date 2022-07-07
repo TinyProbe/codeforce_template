@@ -91,7 +91,7 @@ namespace tiny
 }
 using namespace tiny;
 
-int main(void)
+int	main(void)
 {
 	fastio;
 	setpre(10);
