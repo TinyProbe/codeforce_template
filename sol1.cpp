@@ -26,10 +26,10 @@ template <class T = string> T           scan();
 template <class T = string> vector<T>   scan_vector(const int&);
 template <class T = string> void        print(const T& = T(), const string& = "\n");
 template <class T>          void        print_vector(const vector<T>&, const string& = " ");
-template <class T>          void        swap(T&, T&);
-template <class T>          T           gcd(T, T);
-template <class T>          T           lcm(const T&, const T&);
-template <class T>          T           psum(const T&);
+template <class T>          void        _swap(T&, T&);
+template <class T>          T           _gcd(T, T);
+template <class T>          T           _lcm(const T&, const T&);
+template <class T>          T           _ps(const T&);
 
 template <class T> T rand(const T& mn, const T& mx) {
     static mt19937 gnt((random_device())());
@@ -55,7 +55,7 @@ template <class T> void print_vector(const vector<T>& v, const string& end) {
     if (end != "\n")
         print();
 }
-template <class T> void swap(T& a, T& b) {
+template <class T> void _swap(T& a, T& b) {
     if (&a == &b)
         return ;
     a ^= b;
@@ -78,12 +78,9 @@ template <class T> T _ps(const T& n) {
     return (n * n + n) / 2;
 }
 
-int	main(void)
-{
-    fastio;
-    setpre(10);
-    for (int tc = (0 ? 1 : scan<int>()); tc; --tc)
-    {
+int	main(void) {
+    fastio; setpre(10);
+    for (int tc = (0 ? 1 : scan<int>()); tc; --tc) {
         auto n = scan<int>();
         auto a = scan_vector(n);
         print_vector(a);
