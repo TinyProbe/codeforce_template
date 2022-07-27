@@ -52,7 +52,7 @@ template <class T> void print_vector(const vector<T>& v, const string& end) {
     for (int i = 0; i < v.size(); ++i) { print(v[i], end); }
     if (end != "\n") { print(); }
 }
-template <class T> void swap(T& a, T& b) {
+template <class T> void _swap(T& a, T& b) {
     if (&a == &b) { return; }
     a ^= b; b ^= a; a ^= b;
 }
