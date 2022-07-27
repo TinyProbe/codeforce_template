@@ -19,18 +19,14 @@ template <class T> T scan() {
 }
 template <class T> vector<T> scan_vector(const int& n) {
 	vector<T> v(n);
-	for (int i = 0; i < n; ++i) {
-		v[i] = scan<T>();
-    }
+	for (int i = 0; i < n; ++i) { v[i] = scan<T>(); }
 	return v;
 }
 template <class T> void print(const T& obj, const string& end) {
 	cout << obj << end;
 }
 template <class T> void print_vector(const vector<T>& v, const string& end) {
-	for (int i = 0; i < v.size(); ++i) {
-		print(v[i], end);
-    }
+	for (int i = 0; i < v.size(); ++i) { print(v[i], end); }
 	if (end != "\n") { print(); }
 }
 
