@@ -42,33 +42,23 @@ template <class T> T scan() {
 }
 template <class T> vector<T> scan_vector(const int& n) {
     vector<T> v(n);
-    for (int i = 0; i < n; ++i)
-        v[i] = scan<T>();
+    for (int i = 0; i < n; ++i) { v[i] = scan<T>(); }
     return v;
 }
 template <class T> void print(const T& obj, const string& end) {
     cout << obj << end;
 }
 template <class T> void print_vector(const vector<T>& v, const string& end) {
-    for (int i = 0; i < (int)v.size(); ++i)
-        print(v[i], end);
-    if (end != "\n")
-        print();
+    for (int i = 0; i < v.size(); ++i) { print(v[i], end); }
+    if (end != "\n") { print(); }
 }
-template <class T> void _swap(T& a, T& b) {
-    if (&a == &b)
-        return ;
-    a ^= b;
-    b ^= a;
-    a ^= b;
+template <class T> void swap(T& a, T& b) {
+    if (&a == &b) { return; }
+    a ^= b; b ^= a; a ^= b;
 }
 template <class T> T _gcd(T a, T b) {
-    if (a < b)
-        _swap(a, b);
-    while (b) {
-        a %= b;
-        _swap(a, b);
-    }
+    if (a < b) { _swap(a, b); }
+    while (b) { a %= b; _swap(a, b); }
     return a;
 }
 template <class T> T _lcm(const T& a, const T& b) {
@@ -78,11 +68,9 @@ template <class T> T _ps(const T& n) {
     return (n * n + n) / 2;
 }
 
-int	main(void) {
+int main(void) {
     fastio; setpre(10);
-    for (int tc = (0 ? 1 : scan<int>()); tc; --tc) {
-        auto n = scan<int>();
-        auto a = scan_vector(n);
-        print_vector(a);
+    for (int tc = (0 ? 1 : scan<int>()); tc--; ) {
+
     }
 }
