@@ -13,6 +13,5 @@ int main(void) {
 	system("rm -rf ../generator");
 	system("rm -rf ../detector");
 	system("rm -rf ../in.txt");
-	system("rm -rf ../out1.txt");
-	system("rm -rf ../out2.txt");
+	system("rm -rf ../out*.txt");
 }

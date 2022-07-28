@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-	if (argc < 3 || argc > 4) { return 1; }
+	if (argc != 3 && argc != 4) { return 1; }
 	auto srcfile = string();
 	auto infile = string();
 	auto outfile = string();
@@ -75,7 +75,7 @@ int main(int argc, char** argv) {
     }
 	auto sep1 = srcfile.find_last_of('/');
 	auto sep2 = srcfile.find_last_of('\\');
-	auto sep3 = size_t();
+	auto sep3 = (size_t) 0;
 	if (sep1 != srcfile.npos) { sep3 = max(sep3, sep1); }
 	if (sep2 != srcfile.npos) { sep3 = max(sep3, sep2); }
 	if (srcfile[sep3] == '/' || srcfile[sep3] == '\\') { ++sep3; }
@@ -83,7 +83,7 @@ int main(int argc, char** argv) {
 
 	cout.setTarget("../cvt_" + srcfile);
 	cout.open();
-	for (int i = 0; i < (int)inside.size(); ++i) {
+	for (int i = 0; i < (int) inside.size(); ++i) {
 		cout << inside[i] << '\n';
     }
 	cout.close();
